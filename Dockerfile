@@ -20,6 +20,6 @@ ADD entrypoint.sh /usr/bin/entrypoint.sh
 RUN chmod +x /usr/bin/entrypoint.sh
 
 EXPOSE 80
-
+VOLUME ["/var/www", "/var/log", "/etc/node"]
 ENTRYPOINT ["/usr/bin/entrypoint.sh"]
-CMD []
+CMD [-c]
